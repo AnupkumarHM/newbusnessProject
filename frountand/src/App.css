@@ -1,0 +1,110 @@
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:  url("https://cdn.dribbble.com/users/5031/screenshots/12064169/dribble_1_4x.png");
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center; /* Centers the background image */
+  height: 100vh;
+  color: white;
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding for content inside auth-page */
+  font-family: Arial, sans-serif; /* Example: Set a font-family */
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.banner .tagline {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.banner p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.banner button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: #218838;
+}
+
+.auth-container {
+  position: fixed;
+  top: 130px; /* Adjust the value to move it up */
+  right: 40px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.auth-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #218838;
+}
+
+.form-container {
+  width: 100%;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 16px);
+  margin-bottom: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
