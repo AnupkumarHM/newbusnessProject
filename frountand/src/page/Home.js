@@ -62,7 +62,7 @@ const Home = () => {
 
                     </div>
                 ))}
-                {/* {user.type === 'admin' ? (
+                {user.type === 'admin' ? (
                     <div style={{ marginTop: '10px' }}>
                     <button
                         onClick={handleAdminButtonClick}
@@ -78,7 +78,7 @@ const Home = () => {
                 <div style={{ marginTop: '10px', padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '5px' }}>
                     <div>No admin access</div>
                 </div>
-                        )} */}
+                        )}
             </div>
         </div>
     );
