@@ -1,6 +1,6 @@
 const User = require('../models/User');
 
-app.post('/users', async (req, res) => {
+exports.Insert= async (req, res) => {
   try {
     const user = new User(req.body);
     const result = await user.save();
@@ -8,20 +8,16 @@ app.post('/users', async (req, res) => {
   } catch (error) {
     res.status(500).send(error.message);
   }
-});
-
-// Read (Find All)
-app.get('/users', async (req, res) => {
+};
+exports.Find_All= async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).send(users);
   } catch (error) {
     res.status(500).send(error.message);
   }
-});
-
-// Read (Find by ID)
-app.get('/users/:id', async (req, res) => {
+};
+exports.Find_by_ID= async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     if (!user) return res.status(404).send('User not found');
@@ -29,10 +25,8 @@ app.get('/users/:id', async (req, res) => {
   } catch (error) {
     res.status(500).send(error.message);
   }
-});
-
-// Update
-app.put('/users/:id', async (req, res) => {
+};
+exports.Update= async (req, res) => {
   try {
     const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
     if (!user) return res.status(404).send('User not found');
@@ -40,10 +34,8 @@ app.put('/users/:id', async (req, res) => {
   } catch (error) {
     res.status(500).send(error.message);
   }
-});
-
-// Delete
-app.delete('/users/:id', async (req, res) => {
+};
+exports.Delete=async (req, res) => {
   try {
     const result = await User.findByIdAndDelete(req.params.id);
     if (!result) return res.status(404).send('User not found');
@@ -51,5 +43,5 @@ app.delete('/users/:id', async (req, res) => {
   } catch (error) {
     res.status(500).send(error.message);
   }
-});
+};
 
