@@ -1,4 +1,5 @@
-// Create (Insert)
+const User = require('../models/User');
+
 app.post('/users', async (req, res) => {
   try {
     const user = new User(req.body);
